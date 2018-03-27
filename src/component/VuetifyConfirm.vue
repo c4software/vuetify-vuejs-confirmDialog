@@ -9,8 +9,8 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="red" @click="cancelAction" flat :loading="this.cancelation">{{cancelText}}</v-btn>
-        <v-btn color="green" @click="confirmAction" flat :loading="this.confirmation">{{confirmText}}</v-btn>
+        <v-btn color="red" @click="cancelAction" flat :loading="this.loading">{{cancelText}}</v-btn>
+        <v-btn color="green" @click="confirmAction" flat :loading="this.loading">{{confirmText}}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -21,8 +21,7 @@
     props: ["title", "text", "cancelText", "confirmText", "value"],
     data(){
       return {
-        confirmation: false,
-        cancelation: false,
+        loading: false,
       }
     },
     watch:{
@@ -32,15 +31,14 @@
     },
     methods: {
       resetState(){
-        this.confirmation = false;
-        this.cancelation = false;
+        this.loading = false;
       },
       confirmAction(){
-        this.confirmation = true;
+        this.loading = true;
         this.$emit('confirmAction')
       },
       cancelAction(){
-        this.cancelation = true;
+        this.loading = true;
         this.$emit('cancelAction');
       }
     }
