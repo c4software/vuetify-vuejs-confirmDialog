@@ -1,0 +1,45 @@
+{
+  "name": "vuetify-vuejs-confirmDialog",
+  "version": "0.0.1",
+  "description": "Vuetify VueJS Confirm Component",
+  "main": "dist/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-config-spatie": "^2.0.3",
+    "vue": "^2.5.15",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.15",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-merge": "^4.1.2"
+  },
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production webpack --mode production"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.15",
+    "vuetify": "^1.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c4software/vuetify-vuejs-confirmDialog.git"
+  },
+  "keywords": [
+    "vue",
+    "vuetify",
+    "confirmDialog"
+  ],
+  "author": "Valentin Brosseau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c4software/vuetify-vuejs-confirmDialog/issues"
+  },
+  "homepage": "https://github.com/c4software/vuetify-vuejs-confirmDialog#readme"
+}
