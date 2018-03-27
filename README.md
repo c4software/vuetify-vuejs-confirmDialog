@@ -14,7 +14,15 @@ npm install vuetify-vuejs-confirmDialog --save
 
 ```vue
 <template>
-  <confirmDialog v-model="showConfirm" />
+  <confirmDialog
+    v-model="showConfirm"
+    title="Are you sure ?"
+    text="Warning ! This action is irreversible
+    cancelText="Nope"
+    confirmText="Lets go"
+    v-on:cancelAction="() => this.showConfirm = false"
+    v-on:confirmAction="() => this.showConfirm = false"
+  />
 </template>
 
 <script>
