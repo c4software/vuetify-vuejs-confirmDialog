@@ -10,7 +10,7 @@
       <v-card-actions>
         <v-spacer></v-spacer>
         <v-btn color="red" @click="() => this.$emit('cancelAction')" flat>{{cancelText}}</v-btn>
-        <v-btn color="green" @click="() => this.$emit('confirmAction')" flat>{{confimText}}</v-btn>
+        <v-btn color="green" @click="() => this.$emit('confirmAction')" flat>{{confirmText}}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
