@@ -25,7 +25,16 @@
         cancelation: false,
       }
     },
+    watch:{
+      value: function(){
+        this.resetState();
+      }
+    },
     methods: {
+      resetState(){
+        this.confirmation = false;
+        this.cancelation = false;
+      },
       confirmAction(){
         this.confirmation = true;
         this.$emit('confirmAction')
