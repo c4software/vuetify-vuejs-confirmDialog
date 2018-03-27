@@ -9,7 +9,7 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="red" @click="cancelAction" flat :loading="this.cancelAction">{{cancelText}}</v-btn>
+        <v-btn color="red" @click="cancelAction" flat :loading="this.cancelation">{{cancelText}}</v-btn>
         <v-btn color="green" @click="confirmAction" flat :loading="this.confirmation">{{confirmText}}</v-btn>
       </v-card-actions>
     </v-card>
