@@ -1,13 +1,13 @@
 # vuetify-vuejs-loader
 
-[![npm version](https://badge.fury.io/js/vuetify-vuejs-confirmDialog.svg)](https://www.npmjs.com/package/vuetify-vuejs-confirmDialog)
+[![npm version](https://badge.fury.io/js/vuetify-vuejs-confirmdialog.svg)](https://www.npmjs.com/package/vuetify-vuejs-confirmdialog)
 
 Vuetify VueJS confirmation dialog Component.
 
 ## Installation
 
 ```sh
-npm install vuetify-vuejs-confirmDialog --save
+npm install vuetify-vuejs-confirmdialog --save
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ npm install vuetify-vuejs-confirmDialog --save
 
 <script>
   import Vue from 'vue';
-  import confirmDialog from 'vuetify-vuejs-confirmDialog';
+  import confirmDialog from 'vuetify-vuejs-confirmdialog';
   Vue.use(confirmDialog);
 
   export default {
