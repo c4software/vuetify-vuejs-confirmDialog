@@ -2,7 +2,7 @@ import VuetifyConfirmDialog from './component/VuetifyConfirm';
 
 export default {
     install(Vue) {
-        Vue.component('VuetifyConfirmDialog', VuetifyConfirmDialog);
+        Vue.component('confirmDialog', VuetifyConfirmDialog);
     },
 };
 
