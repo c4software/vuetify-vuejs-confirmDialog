@@ -1,4 +1,4 @@
-# vuetify-vuejs-loader
+# vuetify-vuejs-confirmdialog
 
 [![npm version](https://badge.fury.io/js/vuetify-vuejs-confirmdialog.svg)](https://www.npmjs.com/package/vuetify-vuejs-confirmdialog)
 
