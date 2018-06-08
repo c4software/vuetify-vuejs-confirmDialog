@@ -32,7 +32,7 @@
       },
       emmitClose: function(state){
         if(this.state.promiseResolver){
-          this.state.promiseResolver(true);
+          this.state.promiseResolver(state);
           this.state.isOpen = false;
         }
       }
