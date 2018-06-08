@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="value" max-width="500px" persistent>
+  <v-dialog v-model="value" max-width="500px" persistent @keydown.esc="cancelAction()">
     <v-card>
       <v-card-title class="headline">
         {{title}}
