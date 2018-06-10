@@ -34,6 +34,38 @@ Plugin.prototype.destroy = function(){
 	}
 }
 
+Plugin.prototype.setTitle = function(title) {
+	this.mountIfNotMounted();
+	this.$root.setTitle(title);
+	return Vue.vuetifyMessageDialog;
+}
+
+Plugin.prototype.setText = function(text) {
+	this.mountIfNotMounted();
+	this.$root.setText(text);
+	return Vue.vuetifyMessageDialog;
+}
+
+Plugin.prototype.setCancelText = function(text) {
+	this.mountIfNotMounted();
+	this.$root.setCancelText(text);
+	return Vue.vuetifyMessageDialog;
+}
+
+Plugin.prototype.setConfirmText = function(text) {
+	this.mountIfNotMounted();
+	this.$root.setConfirmText(text);
+	return Vue.vuetifyMessageDialog;
+}
+
+Plugin.prototype.show = function() {
+	this.mountIfNotMounted();
+	return new Promise((resolve, reject) => {
+		this.$root.setPromiseHandler(reject, resolve);
+		this.$root.show();
+	});
+}
+
 Plugin.prototype.open = function(title, text, cancelText, confirmText) {
     this.mountIfNotMounted();
     return new Promise((resolve, reject) => {
