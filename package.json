@@ -1,6 +1,6 @@
 {
   "name": "vuetify-vuejs-confirmdialog",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Vuetify VueJS Confirm Component with Promise support",
   "main": "dist/index.js",
   "dependencies": {},
