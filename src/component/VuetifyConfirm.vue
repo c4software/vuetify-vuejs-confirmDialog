@@ -17,30 +17,30 @@
 </template>
 
 <script>
-  export default {
-    props: ["title", "text", "cancelText", "confirmText", "value"],
-    data(){
-      return {
-        loading: false,
-      }
+export default {
+  props: ["title", "text", "cancelText", "confirmText", "value"],
+  data() {
+    return {
+      loading: false
+    };
+  },
+  watch: {
+    value: function() {
+      this.resetState();
+    }
+  },
+  methods: {
+    resetState() {
+      this.loading = false;
     },
-    watch:{
-      value: function(){
-        this.resetState();
-      }
+    confirmAction() {
+      this.loading = true;
+      this.$emit("confirmAction");
     },
-    methods: {
-      resetState(){
-        this.loading = false;
-      },
-      confirmAction(){
-        this.loading = true;
-        this.$emit('confirmAction')
-      },
-      cancelAction(){
-        this.loading = true;
-        this.$emit('cancelAction');
-      }
+    cancelAction() {
+      this.loading = true;
+      this.$emit("cancelAction");
     }
   }
+};
 </script>
