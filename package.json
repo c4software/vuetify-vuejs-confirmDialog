@@ -3,7 +3,6 @@
   "version": "0.0.16",
   "description": "Vuetify VueJS Confirm Component with Promise support",
   "main": "dist/index.js",
-  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
@@ -15,7 +14,7 @@
     "eslint": "^4.19.1",
     "eslint-config-spatie": "^2.0.3",
     "vue": "^2.5.16",
-    "vue-loader": "^15.2.4",
+    "vue-loader": "^15.4.2",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.11.1",
     "webpack-cli": "^3.0.3",
@@ -26,7 +25,7 @@
   },
   "peerDependencies": {
     "vue": "^2.5.15",
-    "vuetify": "^1.0.6"
+    "vuetify": "^1.3.5"
   },
   "repository": {
     "type": "git",
@@ -42,5 +41,6 @@
   "bugs": {
     "url": "https://github.com/c4software/vuetify-vuejs-confirmDialog/issues"
   },
-  "homepage": "https://github.com/c4software/vuetify-vuejs-confirmDialog#readme"
+  "homepage": "https://github.com/c4software/vuetify-vuejs-confirmDialog#readme",
+  "dependencies": {}
 }
