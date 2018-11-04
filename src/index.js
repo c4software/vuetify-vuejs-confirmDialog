@@ -1,6 +1,5 @@
-import VuetifyConfirmDialog from "./component/VuetifyConfirm";
-import PromiseVuetifyConfirm from "./component/PromiseVuetifyConfirm";
-import { mergeObjs } from "./utilities";
+import VuetifyConfirmDialog from "./component/VuetifyConfirm.vue";
+import PromiseVuetifyConfirm from "./component/PromiseVuetifyConfirm.vue";
 
 let Plugin = function(Vue, globalOptions = {}) {
   this.Vue = Vue;
@@ -46,7 +45,7 @@ Plugin.prototype.open = function(title, text, cancelText, confirmText) {
     localOptions.promiseRejecter = reject;
 
     localOptions.isOpen = true;
-    this.$root.commit(mergeObjs(this.globalOptions, localOptions));
+    this.$root.commit(localOptions);
   });
 };
 
