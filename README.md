@@ -10,12 +10,34 @@ Vuetify VueJS confirmation dialog Component with Promise support.
 npm install vuetify-vuejs-confirmdialog --save
 ```
 
+## Usage with Vuetify-Loader (aka a-la-carte)
+
+Recently the Vuetify plugin for vue-cli enable A-la-carte by default.
+
+### Importing every components
+
+Since Vuetify-Loader didn't « scan » correctly usage in external dependencies you have to manually import components needed…
+
+```javascript
+import Vue from "vue";
+import vuetifyLoader from "vuetify-vuejs-loader";
+import Vuetify;
+import {VDialog,VCard,VCardText,VBtn,VSpacer,VCardTitle,VCardActions} from "vuetify/lib";
+
+Vue.use(Vuetify, {
+  components: {VDialog,VCard,VCardText,VBtn,VSpacer,VCardTitle,VCardActions},
+});
+Vue.use(vuetifyLoader);
+```
+
 ## Quick Promise Usage
 
 ```javascript
-this.$vuetifyConfirmDialog.open("Example Title", "Are you sure ?", "Cancel", "Confirm").then(state => {
-  console.log(state);
-});
+this.$vuetifyConfirmDialog
+  .open("Example Title", "Are you sure ?", "Cancel", "Confirm")
+  .then(state => {
+    console.log(state);
+  });
 ```
 
 ## Detailed Promise Usage
@@ -23,13 +45,11 @@ this.$vuetifyConfirmDialog.open("Example Title", "Are you sure ?", "Cancel", "Co
 Enable the plugin in your Project
 
 ```javascript
-<script>
-  import Vue from 'vue';
-  import confirmDialog from 'vuetify-vuejs-confirmdialog';
-  Vue.use(confirmDialog);
+import Vue from "vue";
+import confirmDialog from "vuetify-vuejs-confirmdialog";
+Vue.use(confirmDialog);
 
-  // …
-</script>
+// …
 ```
 
 Use the plugin in any Vue file :
@@ -40,19 +60,20 @@ Use the plugin in any Vue file :
 </template>
 
 <script>
-export default{
+export default {
   name: "…",
   // …
   methods: {
-    sample: function(){
-      this.$vuetifyConfirmDialog.open("Example Title", "Are you sure ?", "Cancel", "Confirm").then(state => {
-        console.log(state);
-      });
+    sample: function() {
+      this.$vuetifyConfirmDialog
+        .open("Example Title", "Are you sure ?", "Cancel", "Confirm")
+        .then(state => {
+          console.log(state);
+        });
     }
   }
-}
+};
 </script>
-
 ```
 
 ## Component Usage
