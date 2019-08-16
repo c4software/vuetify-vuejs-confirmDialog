@@ -9,8 +9,8 @@
       </v-card-text>
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="red" v-if="!this.loading" @click="cancelAction" flat :loading="this.loading">{{cancelText}}</v-btn>
-        <v-btn color="green" @click="confirmAction" flat :loading="this.loading">{{confirmText}}</v-btn>
+        <v-btn color="red" v-if="!this.loading" @click="cancelAction" text :loading="this.loading">{{cancelText}}</v-btn>
+        <v-btn color="green" @click="confirmAction" text :loading="this.loading">{{confirmText}}</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
