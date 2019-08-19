@@ -15,7 +15,7 @@ Plugin.prototype.mountIfNotMounted = function() {
   this.$root = (() => {
     let ConfirmConstructor = this.Vue.extend(PromiseVuetifyConfirm);
     let node = document.createElement("div");
-    document.querySelector("body").appendChild(node);
+    document.querySelector("#app").appendChild(node);
     return new ConfirmConstructor().$mount(node);
   })();
 
