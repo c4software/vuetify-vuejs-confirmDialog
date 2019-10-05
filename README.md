@@ -66,7 +66,7 @@ export default {
   methods: {
     sample: function() {
       this.$vuetifyConfirmDialog
-        .open("Example Title", "Are you sure ?", "Cancel", "Confirm")
+        .open("Example Title", "Are you sure ?", "Cancel", "Confirm", "Cancel button color", "Confirm button color")
         .then(state => {
           console.log(state);
         });
@@ -106,3 +106,9 @@ export default {
   }
 </script>
 ```
+
+### Optional props:
+
+**cancelColor**: String
+
+**confirmColor**: String
