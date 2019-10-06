@@ -66,7 +66,7 @@ export default {
   methods: {
     sample: function() {
       this.$vuetifyConfirmDialog
-        .open("Example Title", "Are you sure ?", "Cancel", "Confirm")
+        .open("Example Title", "Are you sure ?", "Cancel", "Confirm", "red", "green")
         .then(state => {
           console.log(state);
         });
@@ -86,6 +86,8 @@ export default {
     text="Warning ! This action is irreversible"
     cancelText="Cancel"
     confirmText="Confirm"
+    cancelColor="red"
+    confirmColor="green"
     v-on:cancelAction="() => this.showConfirm = false"
     v-on:confirmAction="() => this.showConfirm = false"
   />
@@ -106,3 +108,9 @@ export default {
   }
 </script>
 ```
+
+### Optional props:
+
+**cancelColor**: String
+
+**confirmColor**: String

@@ -1,5 +1,15 @@
 <template>
-  <confirmDialog :value="state.isOpen" :title="state.title" :text="state.text" :cancelText="state.cancelText" :confirmText="state.confirmText" v-on:cancelAction="() => this.emmitClose(false)" v-on:confirmAction="() => this.emmitClose(true)" />
+  <confirmDialog
+    :value="state.isOpen"
+    :title="state.title"
+    :text="state.text"
+    :cancelText="state.cancelText"
+    :confirmText="state.confirmText"
+    :cancelColor="state.cancelColor"
+    :confirmColor="state.confirmColor"
+    v-on:cancelAction="() => this.emmitClose(false)"
+    v-on:confirmAction="() => this.emmitClose(true)"
+  />
 </template>
 
 <script>
@@ -13,6 +23,8 @@ export default {
         text: "",
         cancelText: "",
         confirmText: "",
+        cancelColor: "",
+        confirmColor: "",
         promiseResolver: undefined,
         promiseRejecter: undefined
       }
