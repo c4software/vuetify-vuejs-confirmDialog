@@ -5,6 +5,10 @@ let Plugin = function(Vue, globalOptions = {}) {
   this.Vue = Vue;
   this.mounted = false;
   this.$root = {};
+  this.context = {};
+  if (globalOptions.context) {
+    this.context = globalOptions.context;
+  }
 };
 
 Plugin.prototype.mountIfNotMounted = function() {
@@ -16,7 +20,7 @@ Plugin.prototype.mountIfNotMounted = function() {
     let ConfirmConstructor = this.Vue.extend(PromiseVuetifyConfirm);
     let node = document.createElement("div");
     document.querySelector("#app").appendChild(node);
-    return new ConfirmConstructor().$mount(node);
+    return new ConfirmConstructor(this.context).$mount(node);
   })();
 
   this.mounted = true;
