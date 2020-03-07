@@ -49,6 +49,7 @@ import Vue from "vue";
 import confirmDialog from "vuetify-vuejs-confirmdialog";
 Vue.use(confirmDialog, {
   // assuming `vuetify` is a Vuetify instance created before
+  // exported from an other « plugin folder » or init in this file.
   context: { vuetify },
 });
 
