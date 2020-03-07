@@ -47,7 +47,10 @@ Enable the plugin in your Project
 ```javascript
 import Vue from "vue";
 import confirmDialog from "vuetify-vuejs-confirmdialog";
-Vue.use(confirmDialog);
+Vue.use(confirmDialog, {
+  // assuming `vuetify` is a Vuetify instance created before
+  context: { vuetify },
+});
 
 // …
 ```
